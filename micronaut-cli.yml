@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: jpatest
+---
+testFramework: junit
+sourceLanguage: java

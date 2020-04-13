@@ -1,0 +1,21 @@
+micronaut:
+  application:
+    name: jpatest
+datasources:
+  default:
+    jdbc-url: jdbc:mysql://localhost:3306/db_questionnaire?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useColumnNamesInFindColumn=true
+    username: root
+    password: '123456'
+    dialect: MYSQL
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    max-lifetime: 180000
+jpa:
+  default:
+    entity-scan:
+      packages: 'jpatest.entity'
+    properties:
+      hibernate:
+#        current_session_context_class: thread
+        hbm2ddl:
+          auto: update
+        show_sql: true
